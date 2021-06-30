@@ -1,10 +1,7 @@
 // Desafio 1
 function compareTrue(var1, var2) {
-  if(var1 == true && var2 == true){
-    return true;
-  }else{
-    return false;
-  }
+  let trueFalse = var1 === true && var2 === var1 ? var1 : false;
+  return trueFalse;
 }
 
 // Desafio 2
