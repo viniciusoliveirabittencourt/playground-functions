@@ -12,22 +12,24 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(fraseDivid) {
-  let num = 0;
+  let palavra = '';
   let fraseArray = [];
-  for(let index = 0; index < fraseDivid.length; index += 1){
-    fraseDivid = fraseDivid[index] + fraseDivid[index + 1];
-    if(fraseDivid[index] === ' '){
-      
+  for (let index = 0; index < fraseDivid.length; index += 1) {
+    if (fraseDivid[index] === ' ') {
+      fraseArray.push(palavra);
+      palavra = '';
+    } else {
+      palavra = palavra + fraseDivid[index];
     }
-    fraseArray.push(fraseDivid);
   }
+  fraseArray.push(palavra);
   return fraseArray;
 }
-console.log(splitSentence('vinicius oliveira'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let nomes = arr[arr.length - 1]+', '+arr[0];
+  return nomes;
 }
 
 // Desafio 5
