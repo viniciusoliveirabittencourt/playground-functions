@@ -13,21 +13,23 @@ function techList(arr, name) {
     }
     return arr;
   }
-  
+
   let arrSaida = [];
 
   for (let index in ordenArrMenorMaior(arr)){
     let minObj = {
-      "tech": "",
+      "tech": 0,
       "name": name
     }
     minObj.tech = ordenArrMenorMaior(arr)[index];
     arrSaida.push(minObj);
   }
 
+  arrSaida = arrSaida[0] == undefined ? 'Vazio!' : arrSaida;
+
   return arrSaida;
 }
-techList([], "Vinicius");
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
