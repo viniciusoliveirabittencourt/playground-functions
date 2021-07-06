@@ -1,13 +1,11 @@
 // Desafio 1
 function compareTrue(var1, var2) {
-  let trueFalse = var1 === true && var2 === var1 ? var1 : false;
-  return trueFalse;
+  return var1 === true && var2 === var1 ? var1 : false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let trianguloArea = (base * height) / 2;
-  return trianguloArea;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -28,19 +26,35 @@ function splitSentence(fraseDivid) {
 
 // Desafio 4
 function concatName(arr) {
-  let nomes = arr[arr.length - 1]+', '+arr[0];
-  return nomes;
+  return arr[arr.length - 1]+', '+arr[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontosToal = (wins * 3) + ties;
-  return pontosToal;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  
+function highestCount(arr) {
+
+  function maiorValorArr(arr) {
+    let maiorNum = arr[0];
+
+    for (let index in arr) {
+      maiorNum < arr[index] ? maiorNum = arr[index] : maiorNum;
+    }
+
+    return maiorNum;
+  }
+
+  let numRepeticao = 0;
+
+  for (let index in arr) {
+    arr[index] === maiorValorArr(arr) ? numRepeticao += 1 : numRepeticao;
+  }
+
+  return numRepeticao;
+
 }
 
 // Desafio 7
